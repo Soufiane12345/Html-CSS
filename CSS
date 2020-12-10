@@ -1,0 +1,91 @@
+body {
+    background: rgb(6,68,160);
+background: linear-gradient(49deg, rgb(133, 143, 158) 3%, rgb(46, 46, 94) 12%, rgb(134, 151, 168) 48%, rgba(6,77,166,1) 93%, rgb(128, 124, 199) 96%);
+}
+/* Hier zorg je ervoor hoe de h1(koppen) eruitzien. We hebben ze 18 pixels groot gemaakt, lettertype arial met sans-serif
+en kleur zwart */
+h1{
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color:black;
+}
+/* Hier stel je in hoe de h3 eruitziet, oftewel de *You need to login first* onderaan de loginbox. */
+h3 {
+  font-family: copperplate, sans-serif;
+  font-size: 14px;
+  color: red;
+}
+/* Hier stel je in hoe de login- en registreerbox eruitziet. Met welke lettertype en grootte. */
+form{
+  font-family: arial, sans-serif;
+  font-size: 15px;
+}
+/* 
+Hier beginnen we met de navigatiebalk bovenin
+
+Hier zorg je ervoor hoe breed de balk wordt. Wij hebben hem gezet op 95%, omdat de balk dan goed in beeld past
+ */
+.container {
+	width: 95%;
+	margin: 0 auto;
+}
+/* Met float:right; hebben we ervoor gezorgd dat de balk rechtsbovenin wordt geplaatst. */
+nav {
+  float: right;
+}
+/* In onze html code hebben we de lijst met de koppen neergezet. 
+Met de nav ul en nav li zorg je ervoor dat de navbar eruitziet zoals jij dat wilt.   */
+nav ul {
+  margin: 10;
+  padding: 0;
+  list-style: none;
+}
+/* Met de display zorg je ervoor dat het in een bepaalde volgorde zit, met inline-block staat de lijst nu
+in plaats van horizontaal, verticaal en achter elkaar. Met de margin kan je instellen hoe veel de navbar uitwijkt naar rechts*/
+nav li {
+  display: inline-block;
+  margin-left: 85px;
+  padding-top: 0px;
+
+  position: relative;
+}
+/* Bij nav a zorg je voor de tekst in de navbar. Dan kan je tekst, decoratie, de grootte enzovoort veranderen. */
+nav a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+/* Bij nav a::before zorg je voor de animatie boven de navbar. Als je dan over 
+een onderwerp in de lijst gaat, komt er een animatie boven de navbar. 
+Bij deze instellingen komt er een grijze balk in beeld met een hoogte van 5 pixels.*/
+nav a::before {
+  content: '';
+  display: line;
+  height: 5px;
+  background-color: gray;
+
+  position: absolute;
+  top: 25;
+  width: 0%;
+
+  transition: all ease-in-out 300ms;
+}
+/* Hier stel je in hoe ver de animatie gaat, als je in pplaats van 100%, 50% doet, gaat de animatie maar
+voor de helft afspelen. */
+nav a:hover::before {
+  width: 100%;
+}
+/* Hier stel je in hoe hoog en hoe breed de login invulbox wordt. */
+.loginbox{
+  width: 100px;
+  height: 50px;
+}
+/* Hier geldt hetzelfde als bij de login invulbox, maar hier is het voor de registreer invulbox.*/
+.registerbox{
+  width: 100px;
+  height: 50px;
+}
+
+
+
